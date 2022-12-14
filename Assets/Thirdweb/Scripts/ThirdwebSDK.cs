@@ -1,5 +1,4 @@
 using System.Collections.Generic;
-using System.Threading.Tasks;
 
 namespace Thirdweb
 {
@@ -102,6 +101,11 @@ namespace Thirdweb
         public Contract GetContract(string address, string abi = null)
         {
             return new Contract(this.chainOrRPC, address, abi);
+        }
+
+        public Program GetProgram(string address, string type = null)
+        {
+            return new Program(address, type);
         }
     }
 }
